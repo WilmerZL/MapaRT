@@ -5,27 +5,15 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity2">
 
-
-    <EditText
-        android:id="@+id/txtLongitud"
-        android:layout_width="112dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="4dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="@+id/longitud"
-        app:layout_constraintHorizontal_bias="0.4"
-        app:layout_constraintStart_toStartOf="@+id/longitud"
-        app:layout_constraintTop_toBottomOf="@+id/longitud" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:background="#FFEB3B"
+        android:background="#AFF494"
         android:text="Monitoreo de posición"
         android:textAlignment="center"
         android:textColor="#000000"
@@ -47,18 +35,6 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <EditText
-        android:id="@+id/txtLatitud"
-        android:layout_width="101dp"
-        android:layout_height="39dp"
-        android:layout_marginTop="4dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="@+id/latitud"
-        app:layout_constraintHorizontal_bias="0.409"
-        app:layout_constraintStart_toStartOf="@+id/latitud"
-        app:layout_constraintTop_toBottomOf="@+id/latitud" />
 
     <TextView
         android:id="@+id/longitud"
@@ -82,7 +58,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtLongitud"
+        app:layout_constraintTop_toBottomOf="@+id/latitud"
         tools:context=".MainActivity2" />
-</androidx.constraintlayout.widget.ConstraintLayout>
 
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -20,7 +20,6 @@ import com.google.android.gms.location.LocationCallback;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
-import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -40,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     private FusedLocationProviderClient fusedLocationClient;
     private LocationCallback locationCallback;
-    DatabaseReference coordinatesRef;
+    DatabaseReference coordenadasRef;
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference LatitudinRef, LongitudinRef;
 
@@ -121,9 +120,9 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
         setupLocationUpdates();
 
-        coordinatesRef = database.getReference("coordinates");
+        coordenadasRef = database.getReference("coordenadas");
 
-        coordinatesRef.addValueEventListener(new ValueEventListener() {
+        coordenadasRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 Double lat = snapshot.child("latitud").getValue(Double.class);
@@ -171,8 +170,8 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         txtLatitud.setText(String.format("%.5f", location.getLatitude()));
         txtLongitud.setText(String.format("%.5f", location.getLongitude()));
 
-        coordinatesRef.child("latitud").setValue(location.getLatitude());
-        coordinatesRef.child("longitud").setValue(location.getLongitude());
+        coordenadasRef.child("latitud").setValue(location.getLatitude());
+        coordenadasRef.child("longitud").setValue(location.getLongitude());
     }
 
     @Override
