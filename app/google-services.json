@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "204605570475",
+    "firebase_url": "https://practicas-3c8b5-default-rtdb.firebaseio.com",
+    "project_id": "practicas-3c8b5",
+    "storage_bucket": "practicas-3c8b5.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:204605570475:android:f70df3865f27540a4366ee",
+        "android_client_info": {
+          "package_name": "com.example.mapart"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1VM__xDHCaxolR8AMxHN55MIKTb2stqg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
